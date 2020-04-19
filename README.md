@@ -78,6 +78,8 @@ WindBot can run as a "server", provide a http interface to create bot.
 
 * DarkMagician
 
+* Dragun
+
 * Dragunity
 
 * GrenMajuThunderBoarder
@@ -102,7 +104,7 @@ WindBot can run as a "server", provide a http interface to create bot.
 
 * ST1732
 
-* Toadally Awesome (old lflist, master rule 3 only)
+* Toadally Awesome
 
 * Trickstar
 
@@ -110,7 +112,7 @@ WindBot can run as a "server", provide a http interface to create bot.
 
 * Zexal Weapons
 
-* Zoodiac (old lflist, master rule 3 only)
+* Zoodiac
 
 ### Unfinished decks
 
@@ -143,6 +145,38 @@ The parameters are same as commandlines, but low cased.
 * If one chain includes two activation that use `AI.SelectCard`, the second one won't select correctly.
 
 ### Changelog
+
+#### v0x134A (2019-05-30)
+
+ - Update YGOPro protrol to 0x134A
+ - New decks: Altergeist, BlueEyesMaxDragon, GrenMajuThunderBoarder, Level8, Orcust, Phantasm, Salamangreat
+ - Use LINQ in codes
+ - Add random bot feature to BotWrapper
+ - Add `ClientCard.Sequence`, `ClientCard.ProcCompleted`, `ClientCard.IsSpecialSummoned`
+ - Add `ClientCard.EquipCards`, `ClientCard.OwnTargets`, handle equip cards
+ - Add `ClientCard.IsCode`, handle card alias
+ - Add `ClientCard.GetLinkedZones`, `ClientCard.HasSetcode`
+ - Add `ClientField.UnderAttack`, `ClientField.GetLinkedZones`, `ClientField.GetFieldSpellCard`
+ - Add `Duel.SummoningCards`, `Duel.LastSummonedCards`
+ - Add `Util.GetTotalAttackingMonsterAttack`, `Util.GetBotAvailZonesFromExtraDeck`
+ - Add `GetMatchingCards`, `GetFirstMatchingCard`, `IsExistingMatchingCard`
+ - Add `ExecutorType.GoToBattlePhase`, `ExecutorType.GoToMainPhase2`, `ExecutorType.GoToEndPhase`
+ - Add `DefaultScapegoat`, `DefaultMaxxC`, `DefaultAshBlossomAndJoyousSpring`, `DefaultGhostOgreAndSnowRabbit`, `DefaultGhostBelleAndHauntedMansion`, `DefaultEffectVeiler`, `DefaultCalledByTheGrave`, `DefaultInfiniteImpermanence`
+ - Rename `AIFunctions` to `AIUtil` (Usage: `AI.Utils.` -> `Util.`)
+ - Rename `AIFunctions.CompareCardAttack` to `CardContainer.CompareCardAttack`
+ - Update `Util.SelectPreferredCards` and `Util.CheckSelectCount` to return the result
+ - Update `ClientField.HasInMonstersZone` to support check face-up card
+ - Update `AI.SelectCard` [\#59](https://github.com/IceYGO/windbot/pull/59)
+ - Handle swap control of cards
+ - Change some `int location` to `CardLocation location`
+ - Update default `OnPreBattleBetween` to recognize more cards
+ - Misc updates to default executors
+ - Misc updates to the AI of some decks
+ - Update the known card enums
+ - Fix `CardSelector.Select`
+ - Fix `OnSelectEffectYn` didn't have `ActivateDescription`
+ - Fix `ClientCard.Attacked`
+ - Fix infinite activation of ZexalWeapons
 
 #### v0x1344 (2018-06-05)
 
